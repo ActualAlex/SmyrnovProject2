@@ -12,15 +12,7 @@ namespace SmyrnovProject2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Programm");
-
-
-            IWebDriver driver = new ChromeDriver(); // передаем путь до chromedriver.exe
-            {
-                driver.Navigate().GoToUrl("https://google.com/");
-
-                driver.Quit();
-            }
+           
         }
     }
 }
