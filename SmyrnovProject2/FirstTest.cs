@@ -28,10 +28,10 @@ namespace SmyrnovProject2
         public void LogInToGmailShouldWork()
         {
             driver.FindElement(By.Id("identifierId")).SendKeys(login);
-            driver.FindElement(By.XPath("//content/span")).Click();
+            driver.FindElement(By.XPath("//span/span")).Click();
             Thread.Sleep(2000);
             driver.FindElement(By.CssSelector("input[type=password]")).SendKeys(password);
-            driver.FindElement(By.XPath("//div/div/content/span")).Click();
+            driver.FindElement(By.XPath("//div/div/span/span")).Click();
             Thread.Sleep(2000);
             String message = driver.FindElement(By.CssSelector(".x7WrMb")).Text;
             Assert.AreEqual(message, "Добро пожаловать, Алексей Смирнов!");

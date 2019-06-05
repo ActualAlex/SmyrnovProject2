@@ -29,10 +29,10 @@ namespace SmyrnovProject2
         public void LogInToGmailWithIncorrectPasswordShouldNotWork()
         {
             driver.FindElement(By.Id("identifierId")).SendKeys(login);
-            driver.FindElement(By.XPath("//content/span")).Click();
+            driver.FindElement(By.XPath("//span/span")).Click();
             Thread.Sleep(2000);
             driver.FindElement(By.CssSelector("input[type=password]")).SendKeys(password);
-            driver.FindElement(By.XPath("//div/div/content/span")).Click();
+            driver.FindElement(By.XPath("//div/div/span/span")).Click();
             Thread.Sleep(2000);
             string message = driver.FindElement(By.CssSelector(".GQ8Pzc")).Text;
             Assert.AreEqual(message, "Неверный пароль. Повторите попытку или нажмите на ссылку \"Забыли пароль?\", чтобы сбросить его.");

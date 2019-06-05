@@ -29,7 +29,7 @@ namespace SmyrnovProject2
         public void LogInToGmailWithIncorrectMailShouldNotWork()
         {
             driver.FindElement(By.Id("identifierId")).SendKeys(login);
-            driver.FindElement(By.XPath("//content/span")).Click();
+            driver.FindElement(By.XPath("//span/span")).Click();
             Thread.Sleep(2000);
             String message = driver.FindElement(By.CssSelector(".GQ8Pzc")).Text;
             Assert.AreEqual(message, "Не удалось найти аккаунт Google");
